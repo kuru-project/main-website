@@ -5,7 +5,7 @@
 ## Documentation Needed
 - https://firebase.google.com/docs/
 - https://vuejs.org/v2/guide/
-- https://tailwindcss.com/
+- https://tailwindcss.com/docs/installation/
 
 ## Build Setup
 
