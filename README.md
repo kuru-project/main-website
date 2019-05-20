@@ -3,8 +3,9 @@
 > Kuru Anime's Main Website
 
 ## Documentation Needed
-> https://firebase.google.com/docs/
-> https://vuejs.org/v2/guide/
+- https://firebase.google.com/docs/
+- https://vuejs.org/v2/guide/
+- https://tailwindcss.com/
 
 ## Build Setup
 
