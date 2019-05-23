@@ -14,7 +14,7 @@ const firebaseConfig = {
   authDomain: 'kuru-anime-network.firebaseapp.com',
   databaseURL: 'https://kuru-anime-network.firebaseio.com',
   projectId: 'kuru-anime-network',
-  torageBucket: 'kuru-anime-network.appspot.com',
+  storageBucket: 'kuru-anime-network.appspot.com',
   messagingSenderId: '195377790597',
   appId: '1:195377790597:web:a9007d1707775d3f'
 }
