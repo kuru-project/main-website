@@ -21,8 +21,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-console.log(firebase)
-
 export default {
   name: 'App'
 }
