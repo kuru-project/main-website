@@ -1,14 +1,16 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ title }}</h1>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Home',
-  data () {
-    return {
-      msg: 'Under Maintenance'
-    }
+  computed: {
+    ...mapState([
+      'title'
+    ])
   }
 }
 </script>
