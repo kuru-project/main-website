@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans">
+  <div>
     <router-view/>
   </div>
 </template>
@@ -11,6 +11,3 @@ export default {
   name: 'App'
 }
 </script>
-
-<style>
-</style>
