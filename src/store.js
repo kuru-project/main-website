@@ -20,13 +20,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    title: 'Kuru Anime'
+    title: 'Kuru Anime',
+    links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/']
   },
   getters: {
-
+    countLinks: state => state.links.length
   },
   mutations: {
-
+    ADD_LINK: (state, link) => {
+      state.links.push(link)
+    }
   },
   actions: {
 

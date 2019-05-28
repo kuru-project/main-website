@@ -1,12 +1,6 @@
 # kuru-anime-main-website
 
-> Kuru Anime's Main Website
-
-## Documentation Needed
-- https://firebase.google.com/docs/
-- https://vuejs.org/v2/guide/
-- https://tailwindcss.com/docs/installation/
-- https://www.youtube.com/watch?v=ZSexhaiMKJE
+Kuru Anime's Main Website
 
 ## Build Setup
 
