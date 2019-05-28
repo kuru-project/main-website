@@ -1,6 +1,6 @@
 # kuru-anime-main-website
 
-> Kuru Anime's Main Website
+Kuru Anime's Main Website
 
 ## Documentation Needed
 - [Firebase](https://firebase.google.com/docs/)
