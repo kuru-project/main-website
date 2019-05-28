@@ -7,6 +7,7 @@ Kuru Anime's Main Website
 - [Vue](https://vuejs.org/v2/guide/)
 - [Tailwind](https://tailwindcss.com/docs/)
 - [Vuex](https://www.youtube.com/watch?v=ZSexhaiMKJE)
+  - [Getters](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=760)
   - [Mutations](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1193)
 
 ## Build Setup
