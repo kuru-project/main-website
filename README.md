@@ -5,11 +5,11 @@
 ## Documentation Needed
 - [Firebase](https://firebase.google.com/docs/)
 - [Vue](https://vuejs.org/v2/guide/)
-- [Tailwind](https://tailwindcss.com/docs/installation/)
+- [Tailwind](https://tailwindcss.com/docs/)
 - [Vuex](https://www.youtube.com/watch?v=ZSexhaiMKJE)
 
-### Vuex with Timestamps
-- [Vue Mutations](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1193)
+### Vuex Video with Timestamps
+- [Mutations](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1193)
 
 ## Build Setup
 
