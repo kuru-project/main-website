@@ -1,4 +1,4 @@
-# Documentation Needed
+# Documentations Needed
 - [Firebase](https://firebase.google.com/docs/)
 - [Tailwind](https://tailwindcss.com/docs/)
 - [Vue](https://vuejs.org/v2/guide/)
