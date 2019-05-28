@@ -7,6 +7,7 @@
 - https://vuejs.org/v2/guide/
 - https://tailwindcss.com/docs/installation/
 - https://www.youtube.com/watch?v=ZSexhaiMKJE
+- [Vue Mutations](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1193)
 
 ## Build Setup
 
