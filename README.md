@@ -3,10 +3,12 @@
 > Kuru Anime's Main Website
 
 ## Documentation Needed
-- https://firebase.google.com/docs/
-- https://vuejs.org/v2/guide/
-- https://tailwindcss.com/docs/installation/
-- https://www.youtube.com/watch?v=ZSexhaiMKJE
+- [Firebase](https://firebase.google.com/docs/)
+- [Vue](https://vuejs.org/v2/guide/)
+- [Tailwind](https://tailwindcss.com/docs/installation/)
+- [Vuex](https://www.youtube.com/watch?v=ZSexhaiMKJE)
+
+### Vuex with Timestamps
 - [Vue Mutations](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1193)
 
 ## Build Setup
