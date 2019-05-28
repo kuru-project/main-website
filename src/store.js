@@ -27,7 +27,9 @@ export default new Vuex.Store({
     countLinks: state => state.links.length
   },
   mutations: {
-
+    ADD_LINK: (state, link) => {
+      state.links.push(link)
+    }
   },
   actions: {
 
