@@ -6,13 +6,16 @@
       <input class="link-input" type="text" placeholder="Add a link" v-model="newLink"/>
     </form>
     <ol>
-      <li v-for="(link, index) in links" v-bind:key="index">{{ link }}</li>
+      <li v-for="(link, index) in links" v-bind:key="index">
+        {{ link }}
+        <button v-on:click="removeLinks(index)">Remove</button>
+      </li>
     </ol>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex'
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'Home',
@@ -34,9 +37,15 @@ export default {
     ...mapMutations([
       'ADD_LINK'
     ]),
+    ...mapActions([
+      'removeLink'
+    ]),
     addLink: function () {
       this.ADD_LINK(this.newLink)
       this.newLink = ''
+    },
+    removeLinks: function (link) {
+      this.removeLink(link)
     }
   }
 }
