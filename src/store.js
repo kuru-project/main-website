@@ -47,6 +47,12 @@ export default new Vuex.Store({
         console.log('Error Message:', error.message)
       })
     },
+    userLogin: (context, data) => {
+      firebase.auth().signInWithEmailAndPassword(data.email, data.password).catch(function (error) {
+        console.log('Error Code:', error.code)
+        console.log('Error Message:', error.message)
+      })
+    },
     removeAll ({commit}) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
