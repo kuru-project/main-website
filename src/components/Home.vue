@@ -11,6 +11,8 @@
         <button v-on:click="removeLinks(index)">Remove</button>
       </li>
     </ol>
+    <button v-on:click="removeAllLinks">Remove All Links</button>
+    <p>{{ msg }}</p>
   </div>
 </template>
 
@@ -21,7 +23,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      newLink: ''
+      newLink: '',
+      msg: ''
     }
   },
   computed: {
@@ -35,10 +38,12 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'ADD_LINK'
+      'ADD_LINK',
+      'REMOVE_ALL'
     ]),
     ...mapActions([
-      'removeLink'
+      'removeLink',
+      'removeAll'
     ]),
     addLink: function () {
       this.ADD_LINK(this.newLink)
@@ -46,6 +51,11 @@ export default {
     },
     removeLinks: function (link) {
       this.removeLink(link)
+    },
+    removeAllLinks () {
+      this.removeAll().then(() => {
+        this.msg = 'They have been removed!'
+      })
     }
   }
 }
