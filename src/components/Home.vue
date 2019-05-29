@@ -6,19 +6,25 @@
       <input class="link-input" type="text" placeholder="Add a link" v-model="newLink"/>
     </form>
     <ol>
-      <li v-for="(link, index) in links" v-bind:key="index">{{ link }}</li>
+      <li v-for="(link, index) in links" v-bind:key="index">
+        {{ link }}
+        <button v-on:click="removeLinks(index)">Remove</button>
+      </li>
     </ol>
+    <button v-on:click="removeAllLinks">Remove All Links</button>
+    <p>{{ msg }}</p>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex'
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'Home',
   data () {
     return {
-      newLink: ''
+      newLink: '',
+      msg: ''
     }
   },
   computed: {
@@ -32,11 +38,24 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'ADD_LINK'
+      'ADD_LINK',
+      'REMOVE_ALL'
+    ]),
+    ...mapActions([
+      'removeLink',
+      'removeAll'
     ]),
     addLink: function () {
       this.ADD_LINK(this.newLink)
       this.newLink = ''
+    },
+    removeLinks: function (link) {
+      this.removeLink(link)
+    },
+    removeAllLinks () {
+      this.removeAll().then(() => {
+        this.msg = 'They have been removed!'
+      })
     }
   }
 }
