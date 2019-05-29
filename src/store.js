@@ -41,6 +41,12 @@ export default new Vuex.Store({
     removeLink: (context, link) => {
       context.commit('REMOVE_LINK', link)
     },
+    userRegister: (context, data) => {
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).catch(function (error) {
+        console.log('Error Code:', error.code)
+        console.log('Error Message:', error.message)
+      })
+    },
     removeAll ({commit}) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
