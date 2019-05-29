@@ -36,7 +36,7 @@ export default new Vuex.Store({
   },
   actions: {
     removeLink: (context, link) => {
-      context.commit("REMOVE_LINK", link)
+      context.commit('REMOVE_LINK', link)
     }
   }
 })
