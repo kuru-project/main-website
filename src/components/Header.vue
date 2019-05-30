@@ -2,17 +2,23 @@
   <header class="block bg-kuru text-white">
     <div class="container mx-auto">
       {{ msg }}
+      <User />
     </div>
   </header>
 </template>
 
 <script>
+import User from '@/components/User'
+
 export default {
   name: 'Header',
   data () {
     return {
       msg: 'Header'
     }
+  },
+  components: {
+    User
   }
 }
 </script>
