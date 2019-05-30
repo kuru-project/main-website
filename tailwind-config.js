@@ -1,6 +1,11 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'kuru': '#CD3C2A',
+        'kuru-dark': '#982618'
+      }
+    }
   },
   variants: {},
   plugins: []
