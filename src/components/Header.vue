@@ -1,7 +1,9 @@
 <template>
-  <div>
-    {{ msg }}
-  </div>
+  <header class="bg-kuru text-white">
+    <div class="container mx-auto">
+      {{ msg }}
+    </div>
+  </header>
 </template>
 
 <script>
