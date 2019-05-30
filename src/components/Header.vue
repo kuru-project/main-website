@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-kuru text-white">
+  <header class="block bg-kuru text-white">
     <div class="container mx-auto">
       {{ msg }}
     </div>
