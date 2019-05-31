@@ -1,6 +1,9 @@
 <template>
   <div class="flex items-center">
-    <h3 class="mr-3">{{ onlineStatus }}</h3>
+    <h3 class="mr-3">
+      <span v-if="onlineStatus === 'offline'">-</span>
+      <span v-if="onlineStatus === 'online'">+</span>
+    </h3>
     <form>
       <input class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" v-model="userEmail" placeholder="Email" />
       <input class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" type="password" v-model="userPassword" placeholder="Password" />
@@ -22,7 +25,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.onlineStatus)
     this.UPDATE_ONLINE_STATUS()
   },
   computed: {
