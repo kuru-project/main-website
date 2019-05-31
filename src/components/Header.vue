@@ -5,13 +5,19 @@
         <h1 v-bind:title="title" class="m-0 p-0 font-roboto-condensed text-2xl">{{ title }}</h1>
       </a>
       <User />
+      <form>
+        <input v-model="userEmail" placeholder="Email" />
+        <input type="password" v-model="userPassword" placeholder="Password" />
+        <button v-on:click="userRegisterFunction" type="button">Register</button>
+        <button v-on:click="userLoginFunction" type="button">Login</button>
+      </form>
     </div>
   </header>
 </template>
 
 <script>
 import User from '@/components/User'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'Header',
@@ -22,6 +28,30 @@ export default {
     ...mapState([
       'title'
     ])
+  },
+  data () {
+    return {
+      userEmail: '',
+      userPassword: ''
+    }
+  },
+  methods: {
+    ...mapActions([
+      'userRegister',
+      'userLogin'
+    ]),
+    userRegisterFunction: function () {
+      let credentials = {}
+      credentials.email = this.userEmail
+      credentials.password = this.userPassword
+      this.userRegister(credentials)
+    },
+    userLoginFunction: function () {
+      let credentials = {}
+      credentials.email = this.userEmail
+      credentials.password = this.userPassword
+      this.userLogin(credentials)
+    }
   }
 }
 </script>
