@@ -22,7 +22,7 @@ export default new Vuex.Store({
   state: {
     title: 'Kuru Anime',
     links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/'],
-    onlineStatus: false
+    onlineStatus: 'offline'
   },
   getters: {
     countLinks: state => state.links.length
@@ -39,9 +39,9 @@ export default new Vuex.Store({
     },
     UPDATE_ONLINE_STATUS: (state) => {
       if (firebase.auth().currentUser) {
-        state.onlineStatus = true
+        state.onlineStatus = 'online'
       } else {
-        state.onlineStatus = false
+        state.onlineStatus = 'offline'
       }
     }
   },
@@ -54,12 +54,14 @@ export default new Vuex.Store({
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
+      context.commit('UPDATE_ONLINE_STATUS')
     },
     userLogin: (context, data) => {
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
+      context.commit('UPDATE_ONLINE_STATUS')
     },
     removeAll ({commit}) {
       return new Promise((resolve, reject) => {
