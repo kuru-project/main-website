@@ -1,6 +1,6 @@
 <template>
   <header class="block bg-kuru text-white">
-    <div class="container mx-auto">
+    <div class="container mx-auto flex items-center">
       {{ msg }}
       <User />
     </div>
