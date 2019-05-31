@@ -21,7 +21,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     title: 'Kuru Anime',
-    links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/']
+    links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/'],
+    onlineStatus: false
   },
   getters: {
     countLinks: state => state.links.length
@@ -35,6 +36,13 @@ export default new Vuex.Store({
     },
     REMOVE_ALL: (state) => {
       state.links = []
+    },
+    UPDATE_ONLINE_STATUS: (state) => {
+      if (firebase.auth().currentUser) {
+        state.onlineStatus = true
+      } else {
+        state.onlineStatus = false
+      }
     }
   },
   actions: {
