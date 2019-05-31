@@ -21,7 +21,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     title: 'Kuru Anime',
-    links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/']
+    links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/'],
+    onlineStatus: 'offline'
   },
   getters: {
     countLinks: state => state.links.length
@@ -35,6 +36,14 @@ export default new Vuex.Store({
     },
     REMOVE_ALL: (state) => {
       state.links = []
+    },
+    UPDATE_ONLINE_STATUS: (state) => {
+      console.log(firebase.auth().currentUser)
+      if (firebase.auth().currentUser) {
+        state.onlineStatus = 'online'
+      } else {
+        state.onlineStatus = 'offline'
+      }
     }
   },
   actions: {
@@ -42,13 +51,17 @@ export default new Vuex.Store({
       context.commit('REMOVE_LINK', link)
     },
     userRegister: (context, data) => {
-      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).catch(function (error) {
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(function (success) {
+        context.commit('UPDATE_ONLINE_STATUS')
+      }).catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
     },
     userLogin: (context, data) => {
-      firebase.auth().signInWithEmailAndPassword(data.email, data.password).catch(function (error) {
+      firebase.auth().signInWithEmailAndPassword(data.email, data.password).then(function (success) {
+        context.commit('UPDATE_ONLINE_STATUS')
+      }).catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
