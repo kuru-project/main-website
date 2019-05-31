@@ -21,6 +21,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+.font-roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 body {
   margin: 0;
 }
