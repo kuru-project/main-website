@@ -14,6 +14,8 @@ import Footer from '@/components/Footer'
 import * as firebase from 'firebase/app'
 import 'firebase'
 
+import { mapMutations } from 'vuex'
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCz3laxK1vMpEpjJFXSx8UyzlH7mE4KBT0',
   authDomain: 'kuru-anime-network.firebaseapp.com',
@@ -26,19 +28,29 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    console.log('User is signed in.')
-  } else {
-    console.log('User is signed out.')
-  }
-})
-
 export default {
   name: 'App',
   components: {
     Header,
     Footer
+  },
+  mounted () {
+    const that = this
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        that.updateUserIsOnlineFunction(true)
+      } else {
+        that.updateUserIsOnlineFunction(false)
+      }
+    })
+  },
+  methods: {
+    ...mapMutations([
+      'UPDATE_USER_IS_ONLINE'
+    ]),
+    updateUserIsOnlineFunction: function (bool) {
+      this.UPDATE_USER_IS_ONLINE(bool)
+    }
   }
 }
 </script>
