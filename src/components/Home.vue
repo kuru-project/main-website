@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
     <h3>There are {{ countLinks }} links.</h3>
     <form @submit.prevent="addLink">
       <input class="link-input" type="text" placeholder="Add a link" v-model="newLink"/>
@@ -29,7 +28,6 @@ export default {
   },
   computed: {
     ...mapState([
-      'title',
       'links'
     ]),
     ...mapGetters([
