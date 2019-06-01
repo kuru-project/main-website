@@ -4,25 +4,13 @@ import Vuex from 'vuex'
 import * as firebase from 'firebase/app'
 import 'firebase'
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyCz3laxK1vMpEpjJFXSx8UyzlH7mE4KBT0',
-  authDomain: 'kuru-anime-network.firebaseapp.com',
-  databaseURL: 'https://kuru-anime-network.firebaseio.com',
-  projectId: 'kuru-anime-network',
-  storageBucket: 'kuru-anime-network.appspot.com',
-  messagingSenderId: '195377790597',
-  appId: '1:195377790597:web:a9007d1707775d3f'
-}
-
-firebase.initializeApp(firebaseConfig)
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     title: 'Kuru Anime',
     links: ['http://discord.kuru-anime.com/', 'https://web.kuru-anime.com/', 'https://bot.kuru-anime.com/'],
-    onlineStatus: 'offline'
+    userIsOnline: false
   },
   getters: {
     countLinks: state => state.links.length
@@ -37,13 +25,8 @@ export default new Vuex.Store({
     REMOVE_ALL: (state) => {
       state.links = []
     },
-    UPDATE_ONLINE_STATUS: (state) => {
-      console.log(firebase.auth().currentUser)
-      if (firebase.auth().currentUser) {
-        state.onlineStatus = 'online'
-      } else {
-        state.onlineStatus = 'offline'
-      }
+    UPDATE_USER_IS_ONLINE: (state, bool) => {
+      state.userIsOnline = bool
     }
   },
   actions: {
@@ -51,19 +34,22 @@ export default new Vuex.Store({
       context.commit('REMOVE_LINK', link)
     },
     userRegister: (context, data) => {
-      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(function (success) {
-        context.commit('UPDATE_ONLINE_STATUS')
-      }).catch(function (error) {
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
     },
     userLogin: (context, data) => {
-      firebase.auth().signInWithEmailAndPassword(data.email, data.password).then(function (success) {
-        context.commit('UPDATE_ONLINE_STATUS')
-      }).catch(function (error) {
+      firebase.auth().signInWithEmailAndPassword(data.email, data.password).catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
+      })
+    },
+    userLogOut: (context) => {
+      firebase.auth().signOut().then(function () {
+        console.log('Sign Out success!')
+      }).catch(function () {
+        console.log('Error in Sign Out')
       })
     },
     removeAll ({commit}) {
