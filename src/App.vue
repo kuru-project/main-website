@@ -26,6 +26,14 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    console.log('User is signed in.')
+  } else {
+    console.log('User is signed out.')
+  }
+})
+
 export default {
   name: 'App',
   components: {
