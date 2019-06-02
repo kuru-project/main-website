@@ -20,13 +20,13 @@ export default new Vuex.Store({
   },
   actions: {
     userRegister: (context, data) => {
-      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).catch(function (error) {
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
     },
     userLogin: (context, data) => {
-      firebase.auth().signInWithEmailAndPassword(data.email, data.password).catch(function (error) {
+      firebase.auth().signInWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
         console.log('Error Code:', error.code)
         console.log('Error Message:', error.message)
       })
