@@ -1,6 +1,6 @@
 <template>
   <div class="text-center bg-gray-700 text-white p-5">
-    {{ title }} &copy; {{ year }}
+    <font-awesome-icon icon="user-secret" /> - {{ title }} &copy; {{ year }}
   </div>
 </template>
 
