@@ -1,7 +1,7 @@
 <template>
-  <div class="text-center bg-gray-700 text-white p-5">
+  <footer class="text-center bg-gray-700 text-white p-5">
     {{ title }} &copy; {{ year }}
-  </div>
+  </footer>
 </template>
 
 <script>
