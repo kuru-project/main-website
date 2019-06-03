@@ -10,5 +10,4 @@
   - [Actions (Async)](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1737)
 - [Font Awesome](https://fontawesome.com/)
   - [FortAwesome](https://github.com/FortAwesome/vue-fontawesome)
-
-
+  - [FortAwesome Example](https://codesandbox.io/s/github/FortAwesome/vue-fontawesome/tree/master/examples/vue-cli-webpack)
