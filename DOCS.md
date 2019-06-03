@@ -8,5 +8,7 @@
   - [Mutations](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1193)
   - [Actions](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1500)
   - [Actions (Async)](https://www.youtube.com/watch?v=ZSexhaiMKJE&feature=youtu.be&t=1737)
+- [Font Awesome](https://fontawesome.com/)
+  - [FortAwesome](https://github.com/FortAwesome/vue-fontawesome)
 
 
