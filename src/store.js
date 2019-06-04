@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import * as firebase from 'firebase/app'
 import 'firebase'
 
-import { createSnackbar  } from '@egoist/snackbar'
+import { createSnackbar } from '@egoist/snackbar'
 import '@egoist/snackbar/dist/snackbar.css'
 
 const firebaseConfig = {
