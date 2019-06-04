@@ -36,7 +36,8 @@ export default new Vuex.Store({
   actions: {
     userRegister: (context, data) => {
       firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
-        createSnackbar(`Register Error: ${error.message} (${error.code})`, {
+        console.log(`Register Error: ${error.message} (${error.code})`)
+        createSnackbar(`Register Error: ${error.message}`, {
           position: 'right',
           timeout: 5000
         })
@@ -44,7 +45,8 @@ export default new Vuex.Store({
     },
     userLogin: (context, data) => {
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
-        createSnackbar(`Login Error: ${error.message} (${error.code})`, {
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
           position: 'right',
           timeout: 5000
         })
