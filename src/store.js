@@ -36,12 +36,18 @@ export default new Vuex.Store({
   actions: {
     userRegister: (context, data) => {
       firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
-        console.log(`Error: ${error.message} (${error.code})`)
+        createSnackbar(`Register Error: ${error.message} (${error.code})`, {
+          position: 'right',
+          timeout: 2000
+        })
       })
     },
     userLogin: (context, data) => {
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
-        console.log(`Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message} (${error.code})`, {
+          position: 'right',
+          timeout: 2000
+        })
       })
     },
     userLogOut: (context) => {
