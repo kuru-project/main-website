@@ -4,6 +4,9 @@ import Vuex from 'vuex'
 import * as firebase from 'firebase/app'
 import 'firebase'
 
+import { createSnackbar  } from '@egoist/snackbar'
+import '@egoist/snackbar/dist/snackbar.css'
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCz3laxK1vMpEpjJFXSx8UyzlH7mE4KBT0',
   authDomain: 'kuru-anime-network.firebaseapp.com',
@@ -43,9 +46,15 @@ export default new Vuex.Store({
     },
     userLogOut: (context) => {
       firebase.auth().signOut().then(function () {
-        console.log('Sign Out success!')
+        createSnackbar('Sign Out success!', {
+          position: 'right',
+          timeout: 2000
+        })
       }).catch(function () {
-        console.log('Error in Sign Out')
+        createSnackbar('Error in Sign Out', {
+          position: 'right',
+          timeout: 2000
+        })
       })
     }
   }
