@@ -4,6 +4,9 @@ import Vuex from 'vuex'
 import * as firebase from 'firebase/app'
 import 'firebase'
 
+import { createSnackbar } from '@egoist/snackbar'
+import '@egoist/snackbar/dist/snackbar.css'
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCz3laxK1vMpEpjJFXSx8UyzlH7mE4KBT0',
   authDomain: 'kuru-anime-network.firebaseapp.com',
@@ -33,19 +36,33 @@ export default new Vuex.Store({
   actions: {
     userRegister: (context, data) => {
       firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
-        console.log(`Error: ${error.message} (${error.code})`)
+        console.log(`Register Error: ${error.message} (${error.code})`)
+        createSnackbar(`Register Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
       })
     },
     userLogin: (context, data) => {
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
-        console.log(`Error: ${error.message} (${error.code})`)
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
       })
     },
     userLogOut: (context) => {
       firebase.auth().signOut().then(function () {
-        console.log('Sign Out success!')
+        createSnackbar('Sign Out success!', {
+          position: 'right',
+          timeout: 5000
+        })
       }).catch(function () {
-        console.log('Error in Sign Out')
+        createSnackbar('Error in Sign Out', {
+          position: 'right',
+          timeout: 5000
+        })
       })
     }
   }
