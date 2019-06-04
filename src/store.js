@@ -38,7 +38,7 @@ export default new Vuex.Store({
       firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
         createSnackbar(`Register Error: ${error.message} (${error.code})`, {
           position: 'right',
-          timeout: 2000
+          timeout: 5000
         })
       })
     },
@@ -46,7 +46,7 @@ export default new Vuex.Store({
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).then().catch(function (error) {
         createSnackbar(`Login Error: ${error.message} (${error.code})`, {
           position: 'right',
-          timeout: 2000
+          timeout: 5000
         })
       })
     },
@@ -54,12 +54,12 @@ export default new Vuex.Store({
       firebase.auth().signOut().then(function () {
         createSnackbar('Sign Out success!', {
           position: 'right',
-          timeout: 2000
+          timeout: 5000
         })
       }).catch(function () {
         createSnackbar('Error in Sign Out', {
           position: 'right',
-          timeout: 2000
+          timeout: 5000
         })
       })
     }
