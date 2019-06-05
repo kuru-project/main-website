@@ -41,12 +41,16 @@ export default {
       credentials.email = this.userEmail
       credentials.password = this.userPassword
       this.userRegister(credentials)
+      this.userEmail = ''
+      this.userPassword = ''
     },
     userLoginFunction: function () {
       let credentials = {}
       credentials.email = this.userEmail
       credentials.password = this.userPassword
       this.userLogin(credentials)
+      this.userEmail = ''
+      this.userPassword = ''
     },
     userLogOutFunction: function () {
       this.userLogOut()
