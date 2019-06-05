@@ -5,7 +5,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  metaInfo: {
+    title: 'Test Title'
+  },
+  computed: {
+    ...mapState([
+      'title'
+    ])
+  }
 }
 </script>
