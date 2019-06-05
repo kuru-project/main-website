@@ -5,7 +5,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  metaInfo: {
+    title: 'Kuru Anime - El Psy Congroo'
+  },
+  computed: {
+    ...mapState([
+      'title'
+    ])
+  }
 }
 </script>
