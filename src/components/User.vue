@@ -5,10 +5,10 @@
     </div>
     <div v-if="userIsOnline === false">
       <form>
-        <input class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" v-model="userEmail" placeholder="Email" />
+        <input class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" type="email" v-model="userEmail" placeholder="Email" />
         <input class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" type="password" v-model="userPassword" placeholder="Password" />
-        <button class="no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3" v-on:click="userRegisterFunction" type="button">Register</button>
-        <button class="no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3" v-on:click="userLoginFunction" type="button">Login</button>
+        <input type="submit" v-on:click="userRegisterFunction"  value="Register"  class="no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3" />
+        <input type="submit" v-on:click="userLoginFunction"     value="Login"     class="no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3"/>
       </form>
     </div>
   </div>
