@@ -7,8 +7,8 @@
       <form>
         <input type="email" v-model="userEmail" placeholder="Email" class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" />
         <input type="password" v-model="userPassword" placeholder="Password" class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" />
-        <input type="submit" v-on:click="userRegisterFunction" value="Register" class="cursor-pointer no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3" />
-        <input type="submit" v-on:click="userLoginFunction" value="Login" class="cursor-pointer no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3"/>
+        <button type="button" v-on:click="userRegisterFunction" class="cursor-pointer no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3">Register</button>
+        <button type="button" v-on:click="userLoginFunction" class="cursor-pointer no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3">Login</button>
       </form>
     </div>
   </div>
