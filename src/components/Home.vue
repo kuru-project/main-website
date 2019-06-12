@@ -1,8 +1,15 @@
 <template>
   <div>
-    <div class="background-image bg-cover bg-no-repeat bg-center">
+    <div class="background-image bg-cover bg-no-repeat bg-center mb-5">
       <div class="background-filter">
-        <div class="container mx-auto h-screen">Top Block</div>
+        <div class="container mx-auto text-center text-white py-20">
+          <h2>{{ title }}</h2>
+          <p>Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
+          <div>
+            <a href="#Register">Register</a>
+            <a href="#Login">Login</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container mx-auto">Main Block</div>
