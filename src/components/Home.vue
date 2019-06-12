@@ -1,6 +1,9 @@
 <template>
-  <div class="container mx-auto">
-    <h3>Under Maintenance</h3>
+  <div>
+    <div class="bg-red-200">
+      <div class="container mx-auto">Top Block</div>
+    </div>
+    <div class="container mx-auto">Main Block</div>
   </div>
 </template>
 

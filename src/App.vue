@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col bg-gray-100 min-h-screen min-w-screen">
     <Header/>
-    <div class="flex-1 my-3">
+    <div class="flex-1">
       <router-view/>
     </div>
     <Footer/>
