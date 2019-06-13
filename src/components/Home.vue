@@ -3,8 +3,8 @@
     <div class="background-image bg-cover bg-no-repeat bg-center mb-5">
       <div class="background-filter">
         <div class="container mx-auto text-center text-white py-20">
-          <h2 class="font-robot-condensed text-4xl">{{ title }}</h2>
-          <p class="block w-64 mx-auto my-5 leading-normal">Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
+          <h2 class="font-robot-condensed text-5xl">{{ title }}</h2>
+          <p class="block w-64 mx-auto my-5 leading-normal text-base">Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
           <div>
             <a href="#Register" class="inline-block m-3 no-underline hover:bg-gray-100 bg-white p-3 text-sm text-kuru rounded shadow-lg text-center w-40">Register</a>
             <a href="#Login" class="inline-block m-3 no-underline hover:bg-gray-100 bg-white p-3 text-sm text-kuru rounded shadow-lg text-center w-40">Login</a>
