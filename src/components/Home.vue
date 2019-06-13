@@ -4,7 +4,7 @@
       <div class="background-filter">
         <div class="container mx-auto text-center text-white py-20">
           <h2 class="font-robot-condensed text-5xl">{{ title }}</h2>
-          <p class="block w-64 mx-auto my-5 leading-normal text-base">Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
+          <p class="block w-64 mx-auto my-10 leading-normal text-base">Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
           <div>
             <button type="button" class="inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-2 text-sm text-kuru rounded shadow-lg text-center w-40">Register</button>
             <button type="button" class="inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-2 text-sm text-kuru rounded shadow-lg text-center w-40">Login</button>
