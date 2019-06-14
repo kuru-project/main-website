@@ -1,7 +1,7 @@
 <template>
   <div>
    <div>This is the modal.</div>
-   <button>[CLOSE]</button>
+   <button>[X]</button>
   </div>
 </template>
 
