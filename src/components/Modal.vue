@@ -1,6 +1,6 @@
 <template>
   <div class="fixed top-0 left-0 w-screen h-screen bg-filter z-50 flex flex-col">
-   <div class="rounded overflow-hidden shadow-lg bg-white my-auto mx-auto">
+   <div class="rounded overflow-hidden shadow-lg bg-white my-auto mx-auto w-full max-w-md p-4">
      <div>This is the modal.</div>
      <button>[X]</button>
    </div>
