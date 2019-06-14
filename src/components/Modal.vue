@@ -1,5 +1,8 @@
 <template>
-  <div>This is the modal.<br /><button>close</button></div>
+  <div>
+   <div>This is the modal.</div>
+   <button>[CLOSE]</button>
+  </div>
 </template>
 
 <script>
