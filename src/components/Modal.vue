@@ -4,7 +4,7 @@
      <div>This is the {{ modalState }} modal.</div>
    </div>
    <div class="fixed top-0 right-0 m-3">
-     <button class="text-white text-2xl cursor-pointer">
+     <button class="text-white hover:text-gray-300 text-2xl cursor-pointer">
       <font-awesome-icon icon="times" />
      </button>
    </div>
