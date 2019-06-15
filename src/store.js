@@ -25,13 +25,16 @@ export default new Vuex.Store({
   state: {
     title: 'Kuru Anime',
     userIsOnline: false,
-    modalStatus: false
+    modalStatus: true
   },
   getters: {
   },
   mutations: {
     UPDATE_USER_IS_ONLINE: (state, bool) => {
       state.userIsOnline = bool
+    },
+    UPDATE_MODAL_STATUS: (state, bool) => {
+      state.modalStatus = bool
     }
   },
   actions: {
@@ -65,6 +68,9 @@ export default new Vuex.Store({
           timeout: 5000
         })
       })
+    },
+    closeModal: (context, bool) => {
+      alert('working')
     }
   }
 })
