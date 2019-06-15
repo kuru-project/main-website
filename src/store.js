@@ -69,7 +69,7 @@ export default new Vuex.Store({
         })
       })
     },
-    closeModal: (context, bool) => {
+    changeModalStatus: (context, bool) => {
       context.commit('UPDATE_MODAL_STATUS', bool)
     }
   }
