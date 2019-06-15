@@ -36,6 +36,9 @@ export default new Vuex.Store({
     },
     UPDATE_MODAL_STATUS: (state, bool) => {
       state.modalStatus = bool
+    },
+    UPDATE_MODAL_STATE: (state, value) => {
+      state.modalState = value
     }
   },
   actions: {

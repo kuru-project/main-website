@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
   name: 'Home',
@@ -39,11 +39,17 @@ export default {
     ...mapActions([
       'changeModalStatus'
     ]),
+    ...mapMutations([
+      'UPDATE_MODAL_STATE'
+    ]),
+
     loginModal: function () {
       this.changeModalStatus(true)
+      this.UPDATE_MODAL_STATE('Login')
     },
     registerModal: function () {
       this.changeModalStatus(true)
+      this.UPDATE_MODAL_STATE('Register')
     }
   }
 }
