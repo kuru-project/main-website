@@ -25,7 +25,8 @@ export default new Vuex.Store({
   state: {
     title: 'Kuru Anime',
     userIsOnline: false,
-    modalStatus: false
+    modalStatus: false,
+    modalState: 'default'
   },
   getters: {
   },
