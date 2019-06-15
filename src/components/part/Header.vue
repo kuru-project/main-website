@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import User from '@/components/User'
+import User from '@/components/part/User'
 import { mapState } from 'vuex'
 
 export default {
