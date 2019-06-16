@@ -21,7 +21,7 @@
       </div>
       <div class="container mx-auto">Main Block</div>
     </div>
-    <div v-if="userIsOnline === true">
+    <div v-if="userIsOnline === true" class="container mx-auto">
       You're online!
     </div>
   </div>
