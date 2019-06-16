@@ -22,14 +22,17 @@ firebase.initializeApp(firebaseConfig)
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  // STATE
   state: {
     title: 'Kuru Anime',
     userIsOnline: false,
     modalStatus: false,
     modalState: 'Default'
   },
+  // GETTERS
   getters: {
   },
+  // MUTATIONS
   mutations: {
     UPDATE_USER_IS_ONLINE: (state, bool) => {
       state.userIsOnline = bool
@@ -41,7 +44,9 @@ export default new Vuex.Store({
       state.modalState = value
     }
   },
+  // ACTIONS
   actions: {
+    // Register
     userRegister: (context, data) => {
       firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(function () {
         context.commit('UPDATE_MODAL_STATUS', false)
@@ -53,6 +58,7 @@ export default new Vuex.Store({
         })
       })
     },
+    // Login
     userLogin: (context, data) => {
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).then(function () {
         context.commit('UPDATE_MODAL_STATUS', false)
@@ -64,6 +70,7 @@ export default new Vuex.Store({
         })
       })
     },
+    // Log Out
     userLogOut: (context) => {
       firebase.auth().signOut().then(function () {
         createSnackbar('Sign Out success!', {
@@ -77,6 +84,7 @@ export default new Vuex.Store({
         })
       })
     },
+    // Change Modal Status
     changeModalStatus: (context, bool) => {
       context.commit('UPDATE_MODAL_STATUS', bool)
     }
