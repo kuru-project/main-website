@@ -13,9 +13,15 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import Login from '@/components/modal/Login'
+import Register from '@/components/modal/Register'
 
 export default {
   name: 'Modal',
+  components: {
+    Login,
+    Register
+  },
   computed: {
     ...mapState([
       'modalStatus',
