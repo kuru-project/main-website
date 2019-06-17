@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .bg-image {
-  background-image: url("../assets/images/Wallpaper.jpg");
+  background-image: url("../assets/images/wallpaper.jpg");
 }
 p.block {
   width: 100%;

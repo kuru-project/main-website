@@ -1,5 +1,6 @@
 <template>
   <div v-if="userIsOnline === false">
+    <img src="../../assets/images/modal/register.png" alt="Register">
     <form>
       <input type="email" v-model="userEmail" placeholder="Email" class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" />
       <input type="password" v-model="userPassword" placeholder="Password" class="shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-3 text-sm" />
