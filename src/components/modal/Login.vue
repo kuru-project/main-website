@@ -1,5 +1,12 @@
 <template>
   <div v-if="!userIsOnline">
+    <div class="relative">
+      <img src="../../assets/images/modal/login.jpg" alt="Login" class="w-full" />
+      <div class="absolute left-0 bottom-0 right-0 text-white text-shadow font-bold px-4 py-2 bg-filter w-100">
+        <font-awesome-icon icon="sign-in-alt" />
+        <span class="ml-2">Login</span>
+      </div>
+    </div>
     <div class="p-4">
       <form>
         <div class="mb-6">
