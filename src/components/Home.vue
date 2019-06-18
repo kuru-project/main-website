@@ -48,7 +48,6 @@ export default {
     ...mapMutations([
       'UPDATE_MODAL_STATE'
     ]),
-
     loginModal: function () {
       this.changeModalStatus(true)
       this.UPDATE_MODAL_STATE('Login')
