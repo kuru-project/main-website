@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="userIsOnline === false">
+    <div v-if="!userIsOnline">
       <div class="bg-image bg-cover bg-no-repeat bg-center mb-5">
         <div class="bg-filter bg-pattern lg:py-10">
           <div class="container mx-auto text-center text-white py-10 lg:py-20 px-10">
@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .bg-image {
-  background-image: url("../assets/images/wallpaper.jpg");
+  background-image: url("~@/assets/images/wallpaper.jpg");
 }
 p.block {
   width: 100%;
