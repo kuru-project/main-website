@@ -23,7 +23,7 @@
       <div class="container mx-auto mb-5">Under Maintenance</div>
     </div>
     <div v-if="userIsOnline === true" class="container mx-auto my-5">
-      Under Maintenance
+      This part is under maintenance!
     </div>
   </div>
 </template>
