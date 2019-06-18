@@ -1,9 +1,14 @@
 <template>
   <header class="p-2 bg-kuru border-b border-kuru-dark">
     <div class="container mx-auto flex items-center">
-      <a href="/" class="mr-auto no-underline text-white">
+      <a href="/" class="mr-5 no-underline text-white">
         <h1 v-bind:title="title" class="m-0 p-0 font-roboto-condensed text-2xl text-engraved font-bold">{{ title }}</h1>
       </a>
+      <div class="mr-auto text-white text-sm">
+        <a href="#" rel="noopener noreferrer" class="mr-2"><font-awesome-icon :icon="['fab', 'discord']" /></a>
+        <a href="#" rel="noopener noreferrer" class="mr-2"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+        <a href="#" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+      </div>
       <User />
     </div>
   </header>

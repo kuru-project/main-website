@@ -7,11 +7,12 @@ import store from './store'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, faUserEdit, faSignInAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faDiscord, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import VueMeta from 'vue-meta'
 
-library.add(faUserSecret, faUserEdit, faSignInAlt, faTimes)
+library.add(faUserSecret, faUserEdit, faSignInAlt, faTimes, faTwitter, faDiscord, faFacebook)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
