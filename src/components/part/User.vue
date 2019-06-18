@@ -1,10 +1,10 @@
 <template>
   <div class="flex items-center">
-    <div v-if="userIsOnline === true">
+    <div v-if="userIsOnline">
       <button class="no-underline hover:bg-grey-lighter bg-white py-1 px-3 text-sm text-kuru rounded shadow mr-3" v-on:click="userLogOutFunction" type="button">Log Out</button>
     </div>
-    <div v-if="userIsOnline === false">
-      Login and Register buttons here!
+    <div v-if="!userIsOnline">
+
     </div>
   </div>
 </template>

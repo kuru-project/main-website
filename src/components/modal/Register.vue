@@ -11,7 +11,7 @@
       </div>
       <div class="flex items-center justify-between">
         <button type="button" v-on:click="userRegisterFunction" class="bg-kuru hover:bg-kuru-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register</button>
-        <a class="hidden inline-block align-baseline font-bold text-sm text-kuru hover:text-kuru-dark" href="#">Forgot Password?</a>
+        <a class="inline-block align-baseline font-bold text-sm text-kuru hover:text-kuru-dark" href="#">Forgot Password?</a>
       </div>
     </form>
   </div>
