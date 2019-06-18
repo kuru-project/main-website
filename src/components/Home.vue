@@ -35,7 +35,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      backgroundArtist: 'https://www.pixiv.net/member.php?id=36116649'
+      backgroundArtist: 'https://www.pixiv.net/member.php?id=3729995'
     }
   },
   metaInfo: {
@@ -69,7 +69,7 @@ export default {
 <style scoped>
 .bg-image {
   /* background-image: url("~@/assets/images/wallpaper.jpg"); */
-  background-image: url("https://imgur.com/bmRuJt5.jpg");
+  background-image: url("https://imgur.com/XcBtPPE.jpg");
 }
 p.block {
   width: 100%;
