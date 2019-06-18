@@ -11,9 +11,9 @@
 
 <script>
 import '@/assets/styles/main.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Modal from '@/components/Modal'
+import Header from '@/components/part/Header'
+import Footer from '@/components/part/Footer'
+import Modal from '@/components/modal/@Modal'
 
 import * as firebase from 'firebase/app'
 import 'firebase'

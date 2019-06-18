@@ -1,24 +1,29 @@
 <template>
   <div>
-    <div class="bg-image bg-cover bg-no-repeat bg-center mb-5">
-      <div class="bg-filter bg-pattern">
-        <div class="container mx-auto text-center text-white py-20">
-          <h2 class="font-robot-condensed text-5xl">{{ title }}</h2>
-          <p class="block w-64 mx-auto my-10 leading-normal text-base">Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
-          <div>
-            <button type="button" v-on:click="registerModal" class="inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-2 text-sm text-kuru rounded shadow-lg text-center w-40">
-              <font-awesome-icon icon="user-edit" />
-              <span class="ml-1">Register</span>
-            </button>
-            <button type="button" v-on:click="loginModal" class="inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-2 text-sm text-kuru rounded shadow-lg text-center w-40">
-              <font-awesome-icon icon="sign-in-alt" />
-              <span class="ml-1">Login</span>
-            </button>
+    <div v-if="userIsOnline === false">
+      <div class="bg-image bg-cover bg-no-repeat bg-center mb-5">
+        <div class="bg-filter bg-pattern lg:py-10">
+          <div class="container mx-auto text-center text-white py-10 lg:py-20 px-10">
+            <h2 class="font-bold font-robot-condensed text-4xl">El Psy Congroo</h2>
+            <p class="block w-64 mx-auto my-10 leading-normal text-base">Welcome to Kuru Anime community! A place where you can post your drawings, blogs, ideas and much more! Signing up is free and always will be.</p>
+            <div>
+              <button type="button" v-on:click="loginModal" class="border-2 border-white inline-block m-3 cursor-pointer bg-transparent py-2 text-sm text-white rounded shadow-lg text-center w-40">
+                <font-awesome-icon icon="sign-in-alt" />
+                <span class="ml-1">Login</span>
+              </button>
+              <button type="button" v-on:click="registerModal" class="border-2 border-white inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-2 text-sm text-kuru rounded shadow-lg text-center w-40">
+                <font-awesome-icon icon="user-edit" />
+                <span class="ml-1">Register</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <div class="container mx-auto">Main Block</div>
     </div>
-    <div class="container mx-auto">Main Block</div>
+    <div v-if="userIsOnline === true" class="container mx-auto">
+      You're online!
+    </div>
   </div>
 </template>
 
@@ -32,7 +37,8 @@ export default {
   },
   computed: {
     ...mapState([
-      'title'
+      'title',
+      'userIsOnline'
     ])
   },
   methods: {
@@ -57,7 +63,7 @@ export default {
 
 <style scoped>
 .bg-image {
-  background-image: url("../assets/images/Wallpaper.jpg");
+  background-image: url("../assets/images/wallpaper.jpg");
 }
 p.block {
   width: 100%;
