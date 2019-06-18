@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
   name: 'User',
@@ -30,10 +30,22 @@ export default {
   },
   methods: {
     ...mapActions([
-      'userLogOut'
+      'userLogOut',
+      'changeModalStatus'
+    ]),
+    ...mapMutations([
+      'UPDATE_MODAL_STATE'
     ]),
     userLogOutFunction: function () {
       this.userLogOut()
+    },
+    loginModal: function () {
+      this.changeModalStatus(true)
+      this.UPDATE_MODAL_STATE('Login')
+    },
+    registerModal: function () {
+      this.changeModalStatus(true)
+      this.UPDATE_MODAL_STATE('Register')
     }
   }
 }
