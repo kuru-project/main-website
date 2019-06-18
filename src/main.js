@@ -10,6 +10,9 @@ import { faUserSecret, faUserEdit, faSignInAlt, faTimes } from '@fortawesome/fre
 import { faTwitter, faDiscord, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+import Tooltip from 'vue-directive-tooltip'
+import 'vue-directive-tooltip/css/index.css'
+
 import VueMeta from 'vue-meta'
 
 library.add(faUserSecret, faUserEdit, faSignInAlt, faTimes, faTwitter, faDiscord, faFacebookSquare)
@@ -21,6 +24,8 @@ Vue.config.productionTip = false
 Vue.use(VueMeta, {
   refreshOnceOnNavigation: true
 })
+
+Vue.use(Tooltip)
 
 /* eslint-disable no-new */
 new Vue({

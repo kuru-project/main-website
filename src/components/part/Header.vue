@@ -5,9 +5,9 @@
         <h1 v-bind:title="title" class="m-0 p-0 font-roboto-condensed text-2xl text-engraved font-bold">{{ title }}</h1>
       </a>
       <div class="mr-auto text-white text-sm">
-        <a href="http://discord.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2 hover:text-gray-200"><font-awesome-icon :icon="['fab', 'discord']" /></a>
-        <a href="http://facebook.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2 hover:text-gray-200"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
-        <a href="http://twitter.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-200"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+        <a href="http://discord.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2 hover:text-gray-200" v-tooltip.bottom="'Discord'"><font-awesome-icon :icon="['fab', 'discord']" /></a>
+        <a href="http://facebook.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2 hover:text-gray-200" v-tooltip.bottom="'Facebook'"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
+        <a href="http://twitter.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-200" v-tooltip.bottom="'Twitter'"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
       </div>
       <User />
     </div>

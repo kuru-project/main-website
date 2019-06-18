@@ -13,3 +13,4 @@
   - [FortAwesome Example](https://codesandbox.io/s/github/FortAwesome/vue-fontawesome/tree/master/examples/vue-cli-webpack)
 - [SnackBar](https://snackbar.egoist.sh/)
 - [Vue Meta](https://github.com/nuxt/vue-meta)
+- [Vue Directive Tooltip](https://hekigan.github.io/vue-directive-tooltip/)
