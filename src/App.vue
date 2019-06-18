@@ -16,7 +16,7 @@ import Footer from '@/components/part/Footer'
 import Modal from '@/components/modal/@Modal'
 
 import * as firebase from 'firebase/app'
-import 'firebase'
+import 'firebase/auth'
 
 import { mapMutations } from 'vuex'
 

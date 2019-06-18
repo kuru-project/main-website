@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import * as firebase from 'firebase/app'
-import 'firebase'
+import 'firebase/auth'
 
 import { createSnackbar } from '@egoist/snackbar'
 import '@egoist/snackbar/dist/snackbar.css'
