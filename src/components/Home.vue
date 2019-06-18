@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <a v-bind:href="backgroundArtist" target="_blank" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5">View Background Artist</a>
+        <a v-bind:href="backgroundArtist" target="_blank" rel="noopener noreferrer" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5">View Background Artist</a>
       </div>
       <div class="container mx-auto">Under Maintenance</div>
     </div>
