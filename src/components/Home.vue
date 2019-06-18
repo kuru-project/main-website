@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="!userIsOnline">
-      <div class="bg-image bg-cover bg-no-repeat bg-center mb-5">
+      <div class="bg-image bg-cover bg-no-repeat bg-center mb-5 relative">
         <div class="bg-filter bg-pattern lg:py-10">
           <div class="container mx-auto text-center text-white py-10 lg:py-20 px-10">
             <h2 class="font-bold font-robot-condensed text-4xl">El Psy Congroo</h2>
@@ -18,6 +18,7 @@
             </div>
           </div>
         </div>
+        <a href="https://www.pixiv.net/member.php?id=36116649" target="_blank" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5">View Background Artist</a>
       </div>
       <div class="container mx-auto">Main Block</div>
     </div>
