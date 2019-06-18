@@ -10,6 +10,9 @@
      <div v-if="modalState === 'Register'">
        <Register />
      </div>
+     <div v-if="modalState === 'ForgotPassword'">
+       <ForgotPassword />
+     </div>
    </div>
    <div class="fixed top-0 right-0 m-3">
      <button class="text-white hover:text-gray-300 text-2xl cursor-pointer">
@@ -23,12 +26,14 @@
 import { mapState, mapActions } from 'vuex'
 import Login from '@/components/modal/Login'
 import Register from '@/components/modal/Register'
+import ForgotPassword from '@/components/modal/ForgotPassword'
 
 export default {
   name: 'Modal',
   components: {
     Login,
-    Register
+    Register,
+    ForgotPassword
   },
   computed: {
     ...mapState([

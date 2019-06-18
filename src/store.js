@@ -70,6 +70,10 @@ export default new Vuex.Store({
         })
       })
     },
+    // Forgot Password
+    userForgotPassword: (context, data) => {
+      console.log(data)
+    },
     // Log Out
     userLogOut: (context) => {
       firebase.auth().signOut().then(function () {
