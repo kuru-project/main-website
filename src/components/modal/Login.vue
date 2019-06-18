@@ -24,6 +24,7 @@
       </form>
       <button type="button" v-on:click="userFacebookLoginFunction">Facebook Login</button>
       <button type="button" v-on:click="userTwitterLoginFunction">Twitter Login</button>
+      <button type="button" v-on:click="userGoogleLoginFunction">Google Login</button>
     </div>
     <div class="border-t px-4 py-2 text-center bg-gray-200 text-xs">
       Don't have an account? <button type="button" v-on:click="registerModal" class="inline-block text-kuru hover:underline cursor-pointer">Register</button> instead.
@@ -51,7 +52,8 @@ export default {
     ...mapActions([
       'userLogin',
       'userFacebookLogin',
-      'userTwitterLogin'
+      'userTwitterLogin',
+      'userGoogleLogin'
     ]),
     ...mapMutations([
       'UPDATE_MODAL_STATE'
@@ -70,6 +72,9 @@ export default {
     },
     userTwitterLoginFunction: function () {
       this.userTwitterLogin()
+    },
+    userGoogleLoginFunction: function () {
+      this.userGoogleLogin()
     },
     registerModal: function () {
       this.UPDATE_MODAL_STATE('Register')

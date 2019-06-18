@@ -19,6 +19,7 @@ const firebaseConfig = {
 
 const facebookProvider = new firebase.auth.FacebookAuthProvider()
 const twitterProvider = new firebase.auth.TwitterAuthProvider()
+const googleProvider = new firebase.auth.GoogleAuthProvider()
 
 firebase.initializeApp(firebaseConfig)
 
@@ -88,6 +89,18 @@ export default new Vuex.Store({
     // Login with Twitter
     userTwitterLogin: (context) => {
       firebase.auth().signInWithPopup(twitterProvider).then(function () {
+        context.commit('UPDATE_MODAL_STATUS', false)
+      }).catch(function (error) {
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
+      })
+    },
+    // Login with Google
+    userGoogleLogin: (context) => {
+      firebase.auth().signInWithPopup(googleProvider).then(function () {
         context.commit('UPDATE_MODAL_STATUS', false)
       }).catch(function (error) {
         console.log(`Login Error: ${error.message} (${error.code})`)
