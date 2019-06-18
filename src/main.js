@@ -15,8 +15,6 @@ import 'vue-directive-tooltip/css/index.css'
 
 import VueMeta from 'vue-meta'
 
-import VueAnalytics from 'vue-analytics'
-
 library.add(faUserSecret, faUserEdit, faSignInAlt, faTimes, faTwitter, faDiscord, faFacebookSquare, faGoogle, faFacebookF)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -25,10 +23,6 @@ Vue.config.productionTip = false
 
 Vue.use(VueMeta, {
   refreshOnceOnNavigation: true
-})
-
-Vue.use(VueAnalytics, {
-  id: 'UA-142293671-1'
 })
 
 Vue.use(Tooltip)

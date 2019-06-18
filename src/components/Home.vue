@@ -30,7 +30,6 @@
 
 <script>
 import { mapState, mapActions, mapMutations } from 'vuex'
-import { page } from 'vue-analytics'
 
 export default {
   name: 'Home',
@@ -55,9 +54,6 @@ export default {
     ...mapMutations([
       'UPDATE_MODAL_STATE'
     ]),
-    track () {
-      page('/')
-    },
     loginModal: function () {
       this.changeModalStatus(true)
       this.UPDATE_MODAL_STATE('Login')
