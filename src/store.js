@@ -17,6 +17,8 @@ const firebaseConfig = {
   appId: '1:195377790597:web:a9007d1707775d3f'
 }
 
+const facebookProvider = new firebase.auth.FacebookAuthProvider()
+
 firebase.initializeApp(firebaseConfig)
 
 Vue.use(Vuex)
@@ -68,6 +70,20 @@ export default new Vuex.Store({
           position: 'right',
           timeout: 5000
         })
+      })
+    },
+    // Login with Facebook
+    userFacebookLogin: (context) => {
+      firebase.auth().signInWithPopup(facebookProvider).then(function (result) {
+        let token = result.credential.accessToken
+        let user = result.user
+        console.log(token, user)
+      }).catch(function (error) {
+        let errorCode = error.code
+        let errorMessage = error.message
+        let email = error.email
+        let credential = error.credential
+        console.log(errorCode, errorMessage, email, credential)
       })
     },
     // Forgot Password
