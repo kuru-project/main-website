@@ -17,6 +17,10 @@ const firebaseConfig = {
   appId: '1:195377790597:web:a9007d1707775d3f'
 }
 
+const facebookProvider = new firebase.auth.FacebookAuthProvider()
+const twitterProvider = new firebase.auth.TwitterAuthProvider()
+const googleProvider = new firebase.auth.GoogleAuthProvider()
+
 firebase.initializeApp(firebaseConfig)
 
 Vue.use(Vuex)
@@ -61,6 +65,42 @@ export default new Vuex.Store({
     // Login
     userLogin: (context, data) => {
       firebase.auth().signInWithEmailAndPassword(data.email, data.password).then(function () {
+        context.commit('UPDATE_MODAL_STATUS', false)
+      }).catch(function (error) {
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
+      })
+    },
+    // Login with Facebook
+    userFacebookLogin: (context) => {
+      firebase.auth().signInWithPopup(facebookProvider).then(function () {
+        context.commit('UPDATE_MODAL_STATUS', false)
+      }).catch(function (error) {
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
+      })
+    },
+    // Login with Twitter
+    userTwitterLogin: (context) => {
+      firebase.auth().signInWithPopup(twitterProvider).then(function () {
+        context.commit('UPDATE_MODAL_STATUS', false)
+      }).catch(function (error) {
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
+      })
+    },
+    // Login with Google
+    userGoogleLogin: (context) => {
+      firebase.auth().signInWithPopup(googleProvider).then(function () {
         context.commit('UPDATE_MODAL_STATUS', false)
       }).catch(function (error) {
         console.log(`Login Error: ${error.message} (${error.code})`)

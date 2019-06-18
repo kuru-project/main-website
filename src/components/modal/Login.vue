@@ -22,6 +22,22 @@
           <button type="button" v-on:click="userForgotPasswordFunction" class="inline-block align-baseline font-bold text-sm text-kuru hover:text-kuru-dark cursor-pointer">Forgot Password?</button>
         </div>
       </form>
+      <div class="flex border-t mt-4 pt-4">
+        <button type="button" v-on:click="userFacebookLoginFunction" class="flex-1 rounded text-white py-2 bg-blue-700">
+          <font-awesome-icon :icon="['fab', 'facebook-f']" />
+          <span class="hidden">Facebook</span>
+        </button>
+        <div class="w-4"></div>
+        <button type="button" v-on:click="userTwitterLoginFunction" class="flex-1 rounded text-white py-2 bg-blue-400">
+          <font-awesome-icon :icon="['fab', 'twitter']" />
+          <span class="hidden">Twitter</span>
+        </button>
+        <div class="w-4"></div>
+        <button type="button" v-on:click="userGoogleLoginFunction" class="flex-1 rounded text-white py-2 bg-red-700">
+          <font-awesome-icon :icon="['fab', 'google']" />
+          <span class="hidden">Google</span>
+        </button>
+      </div>
     </div>
     <div class="border-t px-4 py-2 text-center bg-gray-200 text-xs">
       Don't have an account? <button type="button" v-on:click="registerModal" class="inline-block text-kuru hover:underline cursor-pointer">Register</button> instead.
@@ -47,7 +63,10 @@ export default {
   },
   methods: {
     ...mapActions([
-      'userLogin'
+      'userLogin',
+      'userFacebookLogin',
+      'userTwitterLogin',
+      'userGoogleLogin'
     ]),
     ...mapMutations([
       'UPDATE_MODAL_STATE'
@@ -60,6 +79,15 @@ export default {
     },
     userForgotPasswordFunction: function () {
       this.UPDATE_MODAL_STATE('ForgotPassword')
+    },
+    userFacebookLoginFunction: function () {
+      this.userFacebookLogin()
+    },
+    userTwitterLoginFunction: function () {
+      this.userTwitterLogin()
+    },
+    userGoogleLoginFunction: function () {
+      this.userGoogleLogin()
     },
     registerModal: function () {
       this.UPDATE_MODAL_STATE('Register')
