@@ -74,16 +74,14 @@ export default new Vuex.Store({
     },
     // Login with Facebook
     userFacebookLogin: (context) => {
-      firebase.auth().signInWithPopup(facebookProvider).then(function (result) {
-        let token = result.credential.accessToken
-        let user = result.user
-        console.log(token, user)
+      firebase.auth().signInWithPopup(facebookProvider).then(function () {
+        context.commit('UPDATE_MODAL_STATUS', false)
       }).catch(function (error) {
-        let errorCode = error.code
-        let errorMessage = error.message
-        let email = error.email
-        let credential = error.credential
-        console.log(errorCode, errorMessage, email, credential)
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
       })
     },
     // Forgot Password

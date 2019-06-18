@@ -22,6 +22,7 @@
           <button type="button" v-on:click="userForgotPasswordFunction" class="inline-block align-baseline font-bold text-sm text-kuru hover:text-kuru-dark cursor-pointer">Forgot Password?</button>
         </div>
       </form>
+      <button type="button" v-on:click="userFacebookLoginFunction">Facebook Login</button>
     </div>
     <div class="border-t px-4 py-2 text-center bg-gray-200 text-xs">
       Don't have an account? <button type="button" v-on:click="registerModal" class="inline-block text-kuru hover:underline cursor-pointer">Register</button> instead.
@@ -47,7 +48,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'userLogin'
+      'userLogin',
+      'userFacebookLogin'
     ]),
     ...mapMutations([
       'UPDATE_MODAL_STATE'
@@ -60,6 +62,9 @@ export default {
     },
     userForgotPasswordFunction: function () {
       this.UPDATE_MODAL_STATE('ForgotPassword')
+    },
+    userFacebookLoginFunction: function () {
+      this.userFacebookLogin()
     },
     registerModal: function () {
       this.UPDATE_MODAL_STATE('Register')
