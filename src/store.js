@@ -72,7 +72,19 @@ export default new Vuex.Store({
     },
     // Forgot Password
     userForgotPassword: (context, data) => {
-      console.log(data)
+      firebase.auth().sendPasswordResetEmail(data).then(function () {
+        context.commit('UPDATE_MODAL_STATUS', false)
+        createSnackbar(`Email has been sent!`, {
+          position: 'right',
+          timeout: 5000
+        })
+      }).catch(function (error) {
+        console.log(`Login Error: ${error.message} (${error.code})`)
+        createSnackbar(`Login Error: ${error.message}`, {
+          position: 'right',
+          timeout: 5000
+        })
+      })
     },
     // Log Out
     userLogOut: (context) => {
