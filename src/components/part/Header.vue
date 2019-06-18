@@ -6,7 +6,7 @@
       </a>
       <div class="mr-auto text-white text-sm">
         <a href="http://discord.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2"><font-awesome-icon :icon="['fab', 'discord']" /></a>
-        <a href="http://facebook.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+        <a href="http://facebook.kuru-anime.com/" target="_blank" rel="noopener noreferrer" class="mr-2"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
         <a href="http://twitter.kuru-anime.com/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
       </div>
       <User />
