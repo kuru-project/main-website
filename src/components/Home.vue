@@ -54,6 +54,9 @@ export default {
     ...mapMutations([
       'UPDATE_MODAL_STATE'
     ]),
+    track () {
+      this.$ga.page('/')
+    },
     loginModal: function () {
       this.changeModalStatus(true)
       this.UPDATE_MODAL_STATE('Login')
