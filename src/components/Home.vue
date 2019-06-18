@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <a href="https://www.pixiv.net/member.php?id=36116649" target="_blank" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5">View Background Artist</a>
+        <a v-bind:href="backgroundArtist" target="_blank" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5">View Background Artist</a>
       </div>
       <div class="container mx-auto">Main Block</div>
     </div>
@@ -33,6 +33,11 @@ import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
   name: 'Home',
+  data () {
+    return {
+      backgroundArtist: 'https://www.pixiv.net/member.php?id=36116649'
+    }
+  },
   metaInfo: {
     title: 'Kuru Anime - El Psy Congroo'
   },
@@ -63,7 +68,8 @@ export default {
 
 <style scoped>
 .bg-image {
-  background-image: url("~@/assets/images/wallpaper.jpg");
+  /* background-image: url("~@/assets/images/wallpaper.jpg"); */
+  background-image: url("https://imgur.com/bmRuJt5.jpg");
 }
 p.block {
   width: 100%;
