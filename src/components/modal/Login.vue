@@ -1,5 +1,5 @@
 <template>
-  <div v-if="userIsOnline === false">
+  <div v-if="!userIsOnline">
     <form>
       <div class="mb-6">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
@@ -11,14 +11,14 @@
       </div>
       <div class="flex items-center justify-between">
         <button type="button" v-on:click="userLoginFunction" class="bg-kuru hover:bg-kuru-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</button>
-        <a class="inline-block align-baseline font-bold text-sm text-kuru hover:text-kuru-dark" href="#">Forgot Password?</a>
+        <button v-on:click="userForgotPasswordFunction" class="inline-block align-baseline font-bold text-sm text-kuru hover:text-kuru-dark cursor-pointer">Forgot Password?</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
   name: 'Login',
@@ -37,11 +37,17 @@ export default {
     ...mapActions([
       'userLogin'
     ]),
+    ...mapMutations([
+      'UPDATE_MODAL_STATE'
+    ]),
     userLoginFunction: function () {
       let credentials = {}
       credentials.email = this.userEmail
       credentials.password = this.userPassword
       this.userLogin(credentials)
+    },
+    userForgotPasswordFunction: function () {
+      this.UPDATE_MODAL_STATE('ForgotPassword')
     }
   }
 }
