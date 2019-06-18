@@ -100,6 +100,13 @@ export default new Vuex.Store({
         })
       })
     },
+    // Snack Bar
+    snackBar: (context, data) => {
+      createSnackbar(data.title, {
+        position: data.position,
+        timeout: data.timeout
+      })
+    },
     // Change Modal Status
     changeModalStatus: (context, bool) => {
       context.commit('UPDATE_MODAL_STATUS', bool)
