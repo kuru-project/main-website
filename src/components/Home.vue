@@ -22,8 +22,8 @@
       </div>
       <div class="container mx-auto">Under Maintenance</div>
     </div>
-    <div v-if="userIsOnline === true" class="container mx-auto">
-      <div class="container mx-auto">Under Maintenance</div>
+    <div v-if="userIsOnline === true" class="container mx-auto my-5">
+      Under Maintenance
     </div>
   </div>
 </template>
