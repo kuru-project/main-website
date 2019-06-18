@@ -20,10 +20,10 @@
         </div>
         <a v-bind:href="backgroundArtist" target="_blank" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5">View Background Artist</a>
       </div>
-      <div class="container mx-auto">Main Block</div>
+      <div class="container mx-auto">Under Maintenance</div>
     </div>
     <div v-if="userIsOnline === true" class="container mx-auto">
-      You're online!
+      <div class="container mx-auto">Under Maintenance</div>
     </div>
   </div>
 </template>
