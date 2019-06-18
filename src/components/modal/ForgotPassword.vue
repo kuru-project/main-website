@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!userIsOnline">
+  <div v-if="!userIsOnline" class="p-4">
     <form>
       <div class="mb-6">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
