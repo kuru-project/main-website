@@ -21,6 +21,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "firebase": "^6.0.2",
     "vue": "^2.5.2",
+    "vue-analytics": "^5.17.0",
     "vue-directive-tooltip": "^1.5.1",
     "vue-meta": "^1.6.0",
     "vue-router": "^3.0.1",
