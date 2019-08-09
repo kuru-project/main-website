@@ -7,6 +7,8 @@ import 'firebase/auth'
 import { createSnackbar } from '@egoist/snackbar'
 import '@egoist/snackbar/dist/snackbar.css'
 
+const axios = require('axios')
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCz3laxK1vMpEpjJFXSx8UyzlH7mE4KBT0',
   authDomain: 'kuru-anime-network.firebaseapp.com',
@@ -31,10 +33,11 @@ export default new Vuex.Store({
     title: 'Kuru Anime',
     userIsOnline: false,
     modalStatus: false,
-    modalState: 'Default'
-  },
-  // GETTERS
-  getters: {
+    modalState: 'Default',
+    animeData: {},
+    mangaData: {},
+    searchData: [],
+    searchType: 'Anime'
   },
   // MUTATIONS
   mutations: {
@@ -46,6 +49,18 @@ export default new Vuex.Store({
     },
     UPDATE_MODAL_STATE: (state, value) => {
       state.modalState = value
+    },
+    UPDATE_ANIME_DATA: (state, value) => {
+      state.animeData = value
+    },
+    UPDATE_MANGA_DATA: (state, value) => {
+      state.mangaData = value
+    },
+    UPDATE_SEARCH_DATA: (state, value) => {
+      state.searchData = value
+    },
+    UPDATE_SEARCH_TYPE: (state, value) => {
+      state.searchType = value
     }
   },
   // ACTIONS
@@ -135,6 +150,36 @@ export default new Vuex.Store({
         })
       }).catch(function () {
         createSnackbar('Error in Sign Out', {
+          position: 'right',
+          timeout: 5000
+        })
+      })
+    },
+    // Search Anime and Manga Data
+    searchEncyclopediaData: ({ state, commit }, query) => {
+      let apiLink = `https://kitsu.io/api/edge/${state.searchType.toLowerCase()}?filter[text]=${encodeURIComponent(query)}&page[limit]=12`
+      console.log('Kitsu Search Link:', apiLink)
+      axios.get(apiLink).then(function (response) {
+        commit('UPDATE_SEARCH_DATA', response.data.data)
+      }).catch(function (error) {
+        createSnackbar(error, {
+          position: 'right',
+          timeout: 5000
+        })
+      })
+    },
+    // Fetch Anime and Manga Data
+    fetchEncyclopediaData: ({ commit }, { type, id }) => {
+      let apiLink = `https://kitsu.io/api/edge/${type}/${id}`
+      console.log('Kitsu Fetch Link:', apiLink)
+      axios.get(apiLink).then(function (response) {
+        if (type === 'anime') {
+          commit('UPDATE_ANIME_DATA', response.data.data)
+        } else if (type === 'manga') {
+          commit('UPDATE_MANGA_DATA', response.data.data)
+        }
+      }).catch(function (error) {
+        createSnackbar(error, {
           position: 'right',
           timeout: 5000
         })

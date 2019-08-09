@@ -15,3 +15,6 @@
 - [Vue Meta](https://github.com/nuxt/vue-meta)
 - [Vue Directive Tooltip](https://hekigan.github.io/vue-directive-tooltip/)
 - [Vue Analytics](https://github.com/MatteoGabriele/vue-analytics)
+- [Axios](https://github.com/axios/axios)
+- [Kitsu](https://kitsu.docs.apiary.io/)
+- [rscss](https://rscss.io/)

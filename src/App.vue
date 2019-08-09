@@ -56,6 +56,9 @@ export default {
 body {
   margin: 0;
 }
+.smooth-transition {
+  transition: all .5s;
+}
 .text-engraved {
   text-shadow: 0px -1px 0px rgba(0,0,0,.5);
 }
