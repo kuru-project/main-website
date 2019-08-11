@@ -1,4 +1,3 @@
-
 # Story Title
 
 [This is the Card Title](https://github.com/kuru-project/main-website/projects/)
