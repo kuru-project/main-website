@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faUserEdit, faSignInAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faUserEdit, faEye, faSignInAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faDiscord, faFacebookSquare, faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -15,7 +15,7 @@ import 'vue-directive-tooltip/dist/vueDirectiveTooltip.css'
 
 import VueMeta from 'vue-meta'
 
-library.add(faUserSecret, faUserEdit, faSignInAlt, faTimes, faTwitter, faDiscord, faFacebookSquare, faGoogle, faFacebookF)
+library.add(faUserSecret, faUserEdit, faEye, faSignInAlt, faTimes, faTwitter, faDiscord, faFacebookSquare, faGoogle, faFacebookF)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
