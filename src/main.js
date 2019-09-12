@@ -11,7 +11,7 @@ import { faTwitter, faDiscord, faFacebookSquare, faGoogle, faFacebookF } from '@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import Tooltip from 'vue-directive-tooltip'
-import 'vue-directive-tooltip/css/index.css'
+import 'vue-directive-tooltip/dist/vueDirectiveTooltip.css'
 
 import VueMeta from 'vue-meta'
 
