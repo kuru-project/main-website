@@ -23,7 +23,10 @@
       <div class="container mx-auto mb-5">
         Maybe try working on something similar to Evernote.
       </div>
-      <div class="py-10 text-center bg-kuru bg-pattern-2">
+      <div class="py-16 text-center bg-kuru bg-pattern-2">
+        <div>
+          <h2 class="font-bold font-robot-condensed text-4xl mb-3 text-white">Wait... all these for free? Yes!</h2>
+        </div>
         <button type="button" v-on:click="registerModal" class="font-bold uppercase border-2 border-white inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-3 px-8 text-sm text-kuru rounded shadow-lg text-center">
           Register for Free
         </button>
