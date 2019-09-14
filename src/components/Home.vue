@@ -21,7 +21,12 @@
         <a v-bind:href="backgroundArtist" target="_blank" rel="noopener noreferrer" class="opacity-50 text-white text-xs hover:underline inline-block absolute bottom-0 right-0 inline-block m-5"><font-awesome-icon icon="eye" /><span class="pl-1">View Background Artist</span></a>
       </div>
       <div class="container mx-auto mb-5">
-        this is a test
+        Maybe try working on something similar to Evernote.
+      </div>
+      <div class="py-10 text-center bg-kuru bg-pattern-2">
+        <button type="button" v-on:click="registerModal" class="font-bold uppercase border-2 border-white inline-block m-3 cursor-pointer hover:bg-gray-100 bg-white py-3 px-8 text-sm text-kuru rounded shadow-lg text-center">
+          Register for Free
+        </button>
       </div>
     </div>
     <div v-if="userIsOnline === true" class="container mx-auto my-5">
