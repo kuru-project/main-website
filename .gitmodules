@@ -1,0 +1,6 @@
+[submodule "server"]
+	path = server
+	url = git@github.com:kuru-project/main-website-server.git
+[submodule "client"]
+	path = client
+	url = git@github.com:kuru-project/main-website-client.git
