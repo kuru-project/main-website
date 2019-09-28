@@ -1,6 +1,6 @@
 # Story Title
 
-[This is the Card Title](https://github.com/kuru-project/main-website/projects/)
+[This is the Card Title](#00)
 
 # Changes made
 

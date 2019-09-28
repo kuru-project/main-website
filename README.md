@@ -2,29 +2,9 @@
 
 Kuru Anime's Main Website
 
-## Build Setup
+## Cloning
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+This project uses the concept of [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To properly clone the project, you need to run this command:
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+git clone --recurse-submodules https://github.com/kuru-project/main-website.git
+```
