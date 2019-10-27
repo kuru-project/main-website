@@ -14,6 +14,10 @@ This repository is basically to make it easy for people to start their developme
 ```
 sh dev.sh
 ```
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 <table>
